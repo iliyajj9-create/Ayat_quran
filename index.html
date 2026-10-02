@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>نور قرآن</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background-pattern"></div>
+
+    <main class="app">
+
+        <!-- صفحه انتخاب سوره -->
+        <section id="homePage" class="page active">
+
+            <div class="hero">
+
+                <div class="ornament">۞</div>
+
+                <h1>نور قرآن</h1>
+
+                <p>
+                    امروز می‌خواهی کدام سوره را بخوانی؟
+                </p>
+
+                <div class="divider">
+                    <span></span>
+                    <b>﷽</b>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <div class="search-box">
+                <span>⌕</span>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="جستجوی نام سوره..."
+                    autocomplete="off"
+                >
+            </div>
+
+            <div class="surah-count">
+                <span>سوره‌های قرآن کریم</span>
+                <strong>۱۱۴</strong>
+            </div>
+
+            <div id="surahList" class="surah-list"></div>
+
+        </section>
+
+
+        <!-- صفحه نمایش سوره -->
+        <section id="surahPage" class="page">
+
+            <header class="surah-header">
+
+                <button id="backButton" class="back-button">
+                    ←
+                    <span>سوره‌ها</span>
+                </button>
+
+                <div class="header-title">
+                    <span id="headerSurahNumber"></span>
+                    <h2 id="headerSurahName"></h2>
+                </div>
+
+            </header>
+
+
+            <div class="quran-card">
+
+                <div class="surah-title-box">
+
+                    <div class="mini-ornament">۞</div>
+
+                    <h1 id="surahName"></h1>
+
+                    <div class="surah-info">
+                        <span id="surahMeta"></span>
+                    </div>
+
+                    <div class="bismillah">
+                        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+                    </div>
+
+                </div>
+
+
+                <div id="loading" class="loading">
+
+                    <div class="spinner"></div>
+
+                    <p>
+                        در حال آماده‌سازی آیات...
+                    </p>
+
+                </div>
+
+
+                <div id="verses" class="verses"></div>
+
+            </div>
+
+
+            <!-- شمارنده -->
+            <div id="counterBox" class="counter-box">
+
+                <div class="counter-title">
+                    <span>تعداد دفعات قرائت</span>
+                </div>
+
+                <div id="countNumber" class="count-number">
+                    ۰
+                </div>
+
+                <button id="readButton" class="read-button">
+                    <span>✓</span>
+                    آیه را خواندم
+                </button>
+
+                <button id="resetButton" class="reset-button">
+                    ریست کردن امتیاز
+                </button>
+
+            </div>
+
+
+            <footer>
+                <p>
+                    ﷽
+                </p>
+
+                <span>
+                    هر بار خواندن، یک قدم به نور نزدیک‌تر
+                </span>
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <div id="toast" class="toast">
+        +۱ قرائت ثبت شد
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
